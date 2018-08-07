@@ -1,0 +1,20 @@
+<app-server></app-server>
+<input
+  type="text"
+  class="form-control"
+  (input)="onUpdateServerName($event)"
+>
+
+<p-button
+  label="Add Server"
+  [disabled]="!allowNewServer"
+  (onClick)="onCreateServer()">
+</p-button>
+<p [innerText]="serverCreationStatus"></p>
+
+<input
+  type="text"
+  (input)="onUpdateServerName($event)"
+       />
+
+<p [innerText]="serverName"></p>
